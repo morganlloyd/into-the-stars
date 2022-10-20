@@ -35,7 +35,7 @@ app.init();
 // - api url 
 
 // user clicks on button to return random data (title, img) from NASA API
-// use that data to append info to the page
+// use that data to append image, title to the page
 // add functionality to erase previous data when the button is clicked again
 
 //SG - having the description of the image show on user click, extra styling 

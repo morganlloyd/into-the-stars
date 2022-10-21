@@ -1,30 +1,64 @@
 // name space 
-const app = {} ;
+const nasaApp = {} ;
 
 // api key
-app.key = `80155YNgbn31rGs6cnnnxYwvnc3x2so3la8KYXQh`;
+nasaApp.key = `80155YNgbn31rGs6cnnnxYwvnc3x2so3la8KYXQh`;
 
 // init method
-app.init = () => {
-    
+nasaApp.init = () => {
+    nasaApp.setUpEventListeners();
+    nasaApp.getPicture();
+
 }
 
-    app.baseUrl = new URL(`https://api.nasa.gov/planetary/apod`);
+nasaApp.getPicture = () => {
 
-        app.baseUrl.search = new URLSearchParams({
-            api_key: app.key,
-            date: "2022-10-19"
+    nasaApp.baseUrl = new URL(`https://api.nasa.gov/planetary/apod`);
+
+        nasaApp.baseUrl.search = new URLSearchParams({
+            api_key: nasaApp.key,
+            count: 1
         });
 
     
-        fetch(app.baseUrl)
+        fetch(nasaApp.baseUrl)
             .then(response => response.json())
             .then(data => {
+                nasaApp.showPicture(data)
                 console.log(data);
             })
+}
 
+nasaApp.showPicture = (arrayOfData) => {
 
-app.init();
+    const pictureContainer = document.querySelector(`ul`);
+
+    
+    arrayOfData.forEach(img => {
+        const pictureAchor = document.createElement(`li`);
+
+        const picture = document.createElement(`img`);
+        picture.src = img.url;
+        picture.alt = img.title;
+
+        pictureAchor.appendChild(picture);
+
+        pictureContainer.appendChild(pictureAchor);
+        
+
+    });
+    
+}
+nasaApp.setUpEventListeners = () => {
+    const randomButton = document.querySelector(`.randomButton`);
+    randomButton.addEventListener(`click`, function(e) {
+        console.log(e);
+    })
+};
+
+    
+
+nasaApp.init();
 
 
 

@@ -7,7 +7,7 @@ nasaApp.key = `80155YNgbn31rGs6cnnnxYwvnc3x2so3la8KYXQh`;
 // init method
 nasaApp.init = () => {
     nasaApp.setUpEventListeners();
-    nasaApp.getPicture();
+    //nasaApp.getPicture();
 
 }
 
@@ -32,17 +32,18 @@ nasaApp.getPicture = () => {
 nasaApp.showPicture = (arrayOfData) => {
 
     const pictureContainer = document.querySelector(`ul`);
-
+    pictureContainer.innerHTML = '';
     
     arrayOfData.forEach(img => {
         const pictureAchor = document.createElement(`li`);
-
+        const pictureTitle = document.createElement(`h2`);
+        pictureTitle.textContent = img.title;
         const picture = document.createElement(`img`);
         picture.src = img.url;
         picture.alt = img.title;
 
+        pictureAchor.appendChild(pictureTitle);
         pictureAchor.appendChild(picture);
-
         pictureContainer.appendChild(pictureAchor);
         
 
@@ -52,7 +53,7 @@ nasaApp.showPicture = (arrayOfData) => {
 nasaApp.setUpEventListeners = () => {
     const randomButton = document.querySelector(`.randomButton`);
     randomButton.addEventListener(`click`, function(e) {
-        console.log(e);
+        nasaApp.getPicture();
     })
 };
 

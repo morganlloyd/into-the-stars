@@ -52,15 +52,9 @@ nasaApp.showPicture = (arrayOfData) => {
 }
 nasaApp.setUpEventListeners = () => {
     const randomButton = document.querySelector(`.randomButton`);
-<<<<<<< HEAD
-
-=======
-    const imgContainer = document.querySelector('.nasaImgContainer');
->>>>>>> 6bd754a1e0b0fca01361d440716775312ef3c1b5
     randomButton.addEventListener(`click`, function(e) {
 
         nasaApp.getPicture();
-<<<<<<< HEAD
 
         
         pictureContainer.style.display = "block";
@@ -72,10 +66,6 @@ nasaApp.setUpEventListeners = () => {
         
 
     });
-=======
-        imgContainer.style.display = "block";
-    })
->>>>>>> 6bd754a1e0b0fca01361d440716775312ef3c1b5
 };
 
     

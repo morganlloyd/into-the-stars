@@ -1,9 +1,6 @@
 body {
     background-image: url(../assets/sparkling-stars.gif);
-<<<<<<< HEAD
-=======
 
->>>>>>> 6bd754a1e0b0fca01361d440716775312ef3c1b5
     .wrapper {
         width: 1200px;
         margin: 0 auto;
@@ -19,20 +16,24 @@ body {
     }
 
     .nasaImgContainer {
+        min-height: 80vh;
         display: none;
-
         ul {
             list-style: none;
             padding: 0;
+            padding-bottom: 40px;
+            text-align: center;
+            background-color: rgba($color: #0B3D91, $alpha: .7);
+            border-radius: 30px;
 
             li {
                 display: flex;
-                justify-content: center;
+                align-items: center;
                 flex-direction: column;
+
                 img {
                     width: 80%;
-
-                    object-fit: cover;
+                    object-fit: contain;
                 }
             }
         }

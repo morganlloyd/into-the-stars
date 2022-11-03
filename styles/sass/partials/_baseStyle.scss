@@ -15,18 +15,43 @@ button {
     cursor: pointer;
     font-family: $logoFont;
     text-transform: uppercase;
+<<<<<<< HEAD
     border: none;
     background-color: rgba($color: #0B3D91, $alpha: .7);
 
 }
 
+=======
+    @include fontSize(80);
+    text-align: center;
+}
+
+button {
+    padding: 20px 50px;
+    font-family: $logoFont;
+    text-transform: uppercase;
+    border: none;
+    background-color: rgba($color: #0B3D91, $alpha: .7);
+    margin: 42.88px 0;
+}
+
+>>>>>>> 6bd754a1e0b0fca01361d440716775312ef3c1b5
 p {
     font-family: $bodyFont;
     text-align: center;
     @include fontSize(25);
+<<<<<<< HEAD
     margin: 5px 0px;
 }
 
 h1, p, button {
+=======
+    margin: 5px 0;
+}
+
+h1,
+p,
+button {
+>>>>>>> 6bd754a1e0b0fca01361d440716775312ef3c1b5
     color: white;
 }

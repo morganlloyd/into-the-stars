@@ -253,8 +253,23 @@ button {
   cursor: pointer;
   font-family: "NASA";
   text-transform: uppercase;
+<<<<<<< HEAD
   border: none;
   background-color: rgba(11, 61, 145, 0.7);
+=======
+  font-size: 80px;
+  font-size: 4rem;
+  text-align: center;
+}
+
+button {
+  padding: 20px 50px;
+  font-family: "NASA";
+  text-transform: uppercase;
+  border: none;
+  background-color: rgba(11, 61, 145, 0.7);
+  margin: 42.88px 0;
+>>>>>>> 6bd754a1e0b0fca01361d440716775312ef3c1b5
 }
 
 p {
@@ -262,10 +277,19 @@ p {
   text-align: center;
   font-size: 25px;
   font-size: 1.25rem;
+<<<<<<< HEAD
   margin: 5px 0px;
 }
 
 h1, p, button {
+=======
+  margin: 5px 0;
+}
+
+h1,
+p,
+button {
+>>>>>>> 6bd754a1e0b0fca01361d440716775312ef3c1b5
   color: white;
 }
 
@@ -314,7 +338,6 @@ body .nasaImgContainer ul li {
 }
 body .nasaImgContainer ul li img {
   width: 80%;
-  height: 80%;
   -o-object-fit: cover;
      object-fit: cover;
 }

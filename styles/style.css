@@ -235,14 +235,43 @@ html {
   font-family: "Sans Mateo";
   src: url(../fonts/Sans-Mateo-2-Regular.ttf);
 }
+html {
+  scroll-behavior: smooth;
+}
+
 h1 {
+  text-align: center;
   font-family: "NASA";
+  font-size: 90px;
+  font-size: 4.5rem;
+  text-transform: uppercase;
 }
 
-p, button {
+button {
+  padding: 20px 50px;
+  margin-top: 42.88px;
+  cursor: pointer;
+  font-family: "NASA";
+  text-transform: uppercase;
+  border: none;
+  background-color: rgba(11, 61, 145, 0.7);
+}
+
+p {
   font-family: "Sans Mateo";
+  text-align: center;
+  font-size: 25px;
+  font-size: 1.25rem;
+  margin: 5px 0px;
 }
 
+h1, p, button {
+  color: white;
+}
+
+body {
+  background-image: url(../assets/sparkling-stars.gif);
+}
 body .wrapper {
   width: 1200px;
   margin: 0 auto;

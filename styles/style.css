@@ -281,7 +281,6 @@ body .nasaImgContainer ul li {
 }
 body .nasaImgContainer ul li img {
   width: 80%;
-  height: 80%;
   -o-object-fit: cover;
      object-fit: cover;
 }

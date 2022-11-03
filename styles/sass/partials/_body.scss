@@ -1,0 +1,32 @@
+body {
+    .wrapper {
+        width: 1200px;
+        margin: 0 auto;
+        max-width: 90%;
+    }
+
+    .headContent {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nasaImgContainer {
+        ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                img {
+                    width: 80%;
+                    height: 80%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}

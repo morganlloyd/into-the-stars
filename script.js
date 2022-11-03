@@ -56,6 +56,7 @@ nasaApp.setUpEventListeners = () => {
     randomButton.addEventListener(`click`, function(e) {
         nasaApp.getPicture();
         imgContainer.style.display = "block";
+        imgContainer.scrollIntoView();
     })
 };
 

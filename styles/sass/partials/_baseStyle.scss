@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 h1 {
     font-family: $logoFont;
     text-transform: uppercase;
@@ -11,12 +15,14 @@ button {
     text-transform: uppercase;
     border: none;
     background-color: rgba($color: #0B3D91, $alpha: .7);
+    margin: 42.88px 0;
 }
 
 p {
     font-family: $bodyFont;
     text-align: center;
-    @include fontSize(25)
+    @include fontSize(25);
+    margin: 5px 0;
 }
 
 h1,

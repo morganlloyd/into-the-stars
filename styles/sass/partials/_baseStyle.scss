@@ -1,7 +1,26 @@
 h1 {
     font-family: $logoFont;
+    text-transform: uppercase;
+    @include fontSize(80);
+    text-align: center;
 }
 
-p, button {
+button {
+    padding: 20px 50px;
+    font-family: $logoFont;
+    text-transform: uppercase;
+    border: none;
+    background-color: rgba($color: #0B3D91, $alpha: .7);
+}
+
+p {
     font-family: $bodyFont;
+    text-align: center;
+    @include fontSize(25)
+}
+
+h1,
+p,
+button {
+    color: white;
 }

@@ -237,12 +237,36 @@ html {
 }
 h1 {
   font-family: "NASA";
+  text-transform: uppercase;
+  font-size: 80px;
+  font-size: 4rem;
+  text-align: center;
 }
 
-p, button {
+button {
+  padding: 20px 50px;
+  font-family: "NASA";
+  text-transform: uppercase;
+  border: none;
+  background-color: rgba(11, 61, 145, 0.7);
+}
+
+p {
   font-family: "Sans Mateo";
+  text-align: center;
+  font-size: 25px;
+  font-size: 1.25rem;
 }
 
+h1,
+p,
+button {
+  color: white;
+}
+
+body {
+  background-image: url(../assets/sparkling-stars.gif);
+}
 body .wrapper {
   width: 1200px;
   margin: 0 auto;

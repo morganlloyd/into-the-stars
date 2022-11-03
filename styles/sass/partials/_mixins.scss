@@ -1,0 +1,24 @@
+@mixin fontSize($sizeValue) {
+    font-size: $sizeValue * 1px;
+    font-size: ($sizeValue/20) * 1rem;
+}
+
+@mixin breakpoint($size) {
+    @if $size ==medium {
+        @media (max-width: 1080px) {
+            @content;
+        }
+    }
+
+    @else if $size ==small {
+        @media (max-width: 740px) {
+            @content;
+        }
+    }
+
+    @else if $size ==smaller {
+        @media (max-width: 570px) {
+            @content;
+        }
+    }
+}

@@ -1,7 +1,32 @@
-h1 {
-    font-family: $logoFont;
+html {
+    scroll-behavior: smooth;
 }
 
-p, button {
+h1 {
+    font-family: $logoFont;
+    text-transform: uppercase;
+    @include fontSize(80);
+    text-align: center;
+}
+
+button {
+    padding: 20px 50px;
+    font-family: $logoFont;
+    text-transform: uppercase;
+    border: none;
+    background-color: rgba($color: #0B3D91, $alpha: .7);
+    margin: 42.88px 0;
+}
+
+p {
     font-family: $bodyFont;
+    text-align: center;
+    @include fontSize(25);
+    margin: 5px 0;
+}
+
+h1,
+p,
+button {
+    color: white;
 }

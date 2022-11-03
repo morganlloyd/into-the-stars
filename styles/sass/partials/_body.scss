@@ -1,0 +1,37 @@
+body {
+    background-image: url(../assets/sparkling-stars.gif);
+
+    .wrapper {
+        width: 1200px;
+        margin: 0 auto;
+        max-width: 90%;
+    }
+
+    .headContent {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nasaImgContainer {
+        display: none;
+        
+        ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                img {
+                    width: 80%;
+
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}

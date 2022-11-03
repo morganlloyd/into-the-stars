@@ -235,10 +235,86 @@ html {
   font-family: "Sans Mateo";
   src: url(../fonts/Sans-Mateo-2-Regular.ttf);
 }
-h1 {
-  font-family: "NASA";
+html {
+  scroll-behavior: smooth;
 }
 
-p, button {
+h1 {
+  font-family: "NASA";
+  text-transform: uppercase;
+  font-size: 80px;
+  font-size: 4rem;
+  text-align: center;
+}
+
+button {
+  padding: 20px 50px;
+  font-family: "NASA";
+  text-transform: uppercase;
+  border: none;
+  background-color: rgba(11, 61, 145, 0.7);
+  margin: 42.88px 0;
+}
+
+p {
   font-family: "Sans Mateo";
+  text-align: center;
+  font-size: 25px;
+  font-size: 1.25rem;
+  margin: 5px 0;
+}
+
+h1,
+p,
+button {
+  color: white;
+}
+
+body {
+  background-image: url(../assets/sparkling-stars.gif);
+}
+body .wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  max-width: 90%;
+}
+body .headContent {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+body .nasaImgContainer {
+  display: none;
+}
+body .nasaImgContainer ul {
+  list-style: none;
+  padding: 0;
+}
+body .nasaImgContainer ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+body .nasaImgContainer ul li img {
+  width: 80%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }

@@ -323,6 +323,8 @@ body .nasaImgContainer ul {
   padding: 0;
   background-color: rgba(105, 105, 105, 0.7);
   border-radius: 50px;
+  padding-bottom: 40px;
+  text-align: center;
 }
 body .nasaImgContainer ul li {
   display: -webkit-box;
@@ -340,5 +342,13 @@ body .nasaImgContainer ul li img {
   width: 80%;
   -o-object-fit: contain;
      object-fit: contain;
-  padding-bottom: 50px;
+  border-radius: 50px;
+}
+body .nasaImgContainer ul li p {
+  display: none;
+  padding-top: 50px;
+  width: 80%;
+  text-align: left;
+  line-height: 2rem;
+  letter-spacing: 0.15rem;
 }

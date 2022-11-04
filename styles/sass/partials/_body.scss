@@ -32,6 +32,61 @@ body {
                 flex-direction: column;
                 align-items: center;
 
+                .infoAnchor {
+                    position: relative;
+
+                    .inputContainer {
+                        padding-top: 20px;
+
+                        .checkboxClass {
+                            visibility: hidden;
+                        }
+
+                        label {
+                            font-family: $logoFont;
+                            color: transparent;
+                            background-clip: text;
+                            background-image: url(../assets/sparkling-stars.gif);
+                            @include fontSize(25);
+                            text-transform: uppercase;
+                            position: relative;
+                            cursor: pointer;
+                            transition: .3s;
+
+                            &:hover,
+                            &:focus {
+                                color: white;
+
+                                .arrow:not(:hover) {
+                                    border-bottom-width: 10px;
+                                    border-right-width: 10px;
+                                    border-image: none;
+                                }
+                            }
+
+                            .arrow {
+                                position: absolute;
+                                box-sizing: border-box;
+                                height: 3vw;
+                                width: 3vw;
+                                border-style: solid;
+                                border-image: url(../assets/sparkling-stars.gif) 30 round;
+                                border-width: 0px 5px 5px 0px;
+                                transform: rotate(45deg);
+                                transition: border-width 150ms ease-in-out;
+                                left: -40px;
+                                bottom: 5px;
+
+                                &:hover {
+                                        border-bottom-width: 10px;
+                                        border-right-width: 10px;
+                                        border-image: none;
+                                    }
+                            }
+                        }
+                    }
+                }
+
                 img {
                     width: 80%;
                     object-fit: contain;

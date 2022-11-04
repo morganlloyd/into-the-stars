@@ -338,6 +338,61 @@ body .nasaImgContainer ul li {
       -ms-flex-align: center;
           align-items: center;
 }
+body .nasaImgContainer ul li .infoAnchor {
+  position: relative;
+}
+body .nasaImgContainer ul li .infoAnchor .inputContainer {
+  padding-top: 20px;
+}
+body .nasaImgContainer ul li .infoAnchor .inputContainer .checkboxClass {
+  visibility: hidden;
+}
+body .nasaImgContainer ul li .infoAnchor .inputContainer label {
+  font-family: "NASA";
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  background-image: url(../assets/sparkling-stars.gif);
+  font-size: 25px;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+body .nasaImgContainer ul li .infoAnchor .inputContainer label:hover, body .nasaImgContainer ul li .infoAnchor .inputContainer label:focus {
+  color: white;
+}
+body .nasaImgContainer ul li .infoAnchor .inputContainer label:hover .arrow:not(:hover), body .nasaImgContainer ul li .infoAnchor .inputContainer label:focus .arrow:not(:hover) {
+  border-bottom-width: 10px;
+  border-right-width: 10px;
+  -o-border-image: none;
+     border-image: none;
+}
+body .nasaImgContainer ul li .infoAnchor .inputContainer label .arrow {
+  position: absolute;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 3vw;
+  width: 3vw;
+  border-style: solid;
+  -o-border-image: url(../assets/sparkling-stars.gif) 30 round;
+     border-image: url(../assets/sparkling-stars.gif) 30 round;
+  border-width: 0px 5px 5px 0px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: border-width 150ms ease-in-out;
+  transition: border-width 150ms ease-in-out;
+  left: -40px;
+  bottom: 5px;
+}
+body .nasaImgContainer ul li .infoAnchor .inputContainer label .arrow:hover {
+  border-bottom-width: 10px;
+  border-right-width: 10px;
+  -o-border-image: none;
+     border-image: none;
+}
 body .nasaImgContainer ul li img {
   width: 80%;
   -o-object-fit: contain;

@@ -45,26 +45,39 @@ nasaApp.showPicture = (arrayOfData) => {
         pictureTitle.textContent = img.title;
         pictureInfo.textContent = img.explanation;
         
-        const picture = document.createElement(`img`);
+        const picture = document.createElement(`img`); // creating img element
         picture.src = img.url;
         picture.alt = img.title;
         
-        const checkbox = document.createElement('input');
+        const checkbox = document.createElement('input'); // creating checkbox input
         checkbox.type = "checkbox";
         checkbox.name = "curious";
         checkbox.value = "moreInfo";
         checkbox.id = "moreInfo";
+        checkbox.className = "checkboxClass";
 
-        const label = document.createElement('label');
+        const label = document.createElement('label'); // creating label for checkbox
         label.htmlFor = "moreInfo";
         label.textContent = "Additional Information";
 
-        pictureAchor.appendChild(pictureTitle);
-        pictureAchor.appendChild(picture);
-        pictureAchor.appendChild(pictureInfo);
-        pictureContainer.appendChild(pictureAchor);
-        pictureContainer.appendChild(checkbox);
-        pictureContainer.appendChild(label);
+        const arrowDiv = document.createElement('div'); // creating div to hold the arrow 
+        arrowDiv.className = 'arrow';
+        label.appendChild(arrowDiv);
+
+        const inputContainer = document.createElement('div'); // creating div to hold the label and checkbox to align it using position absolute
+        inputContainer.className = 'inputContainer';
+        inputContainer.appendChild(checkbox);
+        inputContainer.appendChild(label);
+
+        const infoAnchor = document.createElement(`div`); // creating div to anchor the absolute positioning of the input container 
+        infoAnchor.className = "infoAnchor";
+        infoAnchor.appendChild(picture);
+        infoAnchor.appendChild(inputContainer);
+        
+        pictureAchor.appendChild(pictureTitle); // adding the title to the li
+        pictureAchor.appendChild(infoAnchor); // adding the container with the img and checkbox to the li
+        pictureAchor.appendChild(pictureInfo); // adding the text description to the li
+        pictureContainer.appendChild(pictureAchor); // adding the li with all the info to the ul
 
         const checkboxListener = document.querySelector('input[type="checkbox"]')
 

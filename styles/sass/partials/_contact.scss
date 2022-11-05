@@ -1,26 +1,60 @@
+header {
+    border: 4px solid white;
+    h2 {
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+
 .contactContainer {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     gap: 40px;
     color: white;
+    height: 70vh;
 
     .nin,
     .morgan {
         background-color: rgba($color: #696969, $alpha: .7);
         border-radius: 20%;
-        padding: 70px 80px;
+        padding: 60px 0px;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
         h3 { 
             font-family: $logoFont;
             @include fontSize(40);
             text-align: center;
             margin: 0;
+            margin-bottom: 30px;
         }
     }
 
     .linkContainer {
+        
         display: flex;
-        gap: 50px;
+        gap: 30px;
+    }
+    .linkLogos {
+        @include fontSize(40);
+        gap: 10px
+    }
+
+    .urlLinks {
+        @include fontSize(38);
+        gap: 8px;
+
+        a {
+            text-decoration: none;
+            font-family: $bodyFont;
+            color: white;
+        }
+        
     }
     .linkLogos, .urlLinks {
         display: flex;

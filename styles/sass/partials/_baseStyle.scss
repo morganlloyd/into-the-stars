@@ -2,6 +2,30 @@ html {
     scroll-behavior: smooth;
 }
 
+nav {
+    width: 100%;
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+
+        a {
+            @include fontSize(25);
+            color: white;
+            font-family: $logoFont;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            &:hover,
+            &:focus {
+                color: #696969;
+                transition: .5s;
+            }
+        }
+    }
+}
+
 h1 {
     text-align: center;
     font-family: $logoFont;

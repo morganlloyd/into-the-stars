@@ -1,0 +1,29 @@
+.contactContainer {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 40px;
+    color: white;
+
+    .nin,
+    .morgan {
+        background-color: rgba($color: #696969, $alpha: .7);
+        border-radius: 20%;
+        padding: 70px 80px;
+
+        h3 { 
+            font-family: $logoFont;
+            @include fontSize(40);
+            text-align: center;
+            margin: 0;
+        }
+    }
+
+    .linkContainer {
+        display: flex;
+        gap: 50px;
+    }
+    .linkLogos, .urlLinks {
+        display: flex;
+        flex-direction: column;
+    }
+}

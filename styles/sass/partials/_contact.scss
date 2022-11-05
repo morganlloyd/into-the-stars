@@ -1,26 +1,50 @@
-header {
-    border: 4px solid white;
-    h2 {
-        text-align: center;
-        text-transform: uppercase;
+// contact navigation
+
+.contactNav {
+    padding-top: 20px;
+
+    ul {
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center
+    }
+    i {
+        @include fontSize(45);
     }
 }
 
+// contact header
+
+header {
+    min-height: 15vh;
+    display: grid;
+    h2 {
+        @include fontSize(60);
+        text-align: center;
+        text-transform: uppercase;
+        margin: auto;
+    }
+}
+
+// contact information section
 .contactContainer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    gap: 40px;
+    align-self: center;
+    min-width: 100%;
+    min-height: 70vh;
+    gap: 80px;
     color: white;
-    height: 70vh;
 
     .nin,
     .morgan {
         background-color: rgba($color: #696969, $alpha: .7);
-        border-radius: 20%;
+        border-radius: 30px;
         padding: 60px 0px;
-        width: 50%;
+        min-width: 80%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -41,18 +65,24 @@ header {
         gap: 30px;
     }
     .linkLogos {
-        @include fontSize(40);
+        @include fontSize(34);
         gap: 10px
     }
 
     .urlLinks {
-        @include fontSize(38);
+        @include fontSize(32);
         gap: 8px;
 
         a {
             text-decoration: none;
             font-family: $bodyFont;
             color: white;
+
+            &:hover,
+            &:focus {
+                color: rgb(176, 145, 205);
+                transition: .2s ease-in-out;
+            }
         }
         
     }

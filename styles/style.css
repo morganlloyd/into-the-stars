@@ -258,6 +258,7 @@ nav ul a {
   font-family: "NASA";
   text-decoration: none;
   text-transform: uppercase;
+  cursor: pointer;
 }
 nav ul a:hover, nav ul a:focus {
   color: #696969;
@@ -321,7 +322,7 @@ body .wrapper {
   max-width: 90%;
 }
 body .headContent {
-  height: 100vh;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -375,35 +376,65 @@ body .nasaImgContainer ul li p {
   letter-spacing: 0.15rem;
 }
 
+.contactNav {
+  padding-top: 20px;
+}
+.contactNav ul {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.contactNav i {
+  font-size: 45px;
+  font-size: 2.25rem;
+}
+
 header {
-  border: 4px solid white;
+  min-height: 15vh;
+  display: grid;
 }
 header h2 {
+  font-size: 60px;
+  font-size: 3rem;
   text-align: center;
   text-transform: uppercase;
+  margin: auto;
 }
 
 .contactContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
-  gap: 40px;
+  -ms-flex-item-align: center;
+      align-self: center;
+  min-width: 100%;
+  min-height: 70vh;
+  gap: 80px;
   color: white;
-  height: 70vh;
 }
 .contactContainer .nin,
 .contactContainer .morgan {
   background-color: rgba(105, 105, 105, 0.7);
-  border-radius: 20%;
+  border-radius: 30px;
   padding: 60px 0px;
-  width: 50%;
+  min-width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -434,19 +465,24 @@ header h2 {
   gap: 30px;
 }
 .contactContainer .linkLogos {
-  font-size: 40px;
-  font-size: 2rem;
+  font-size: 34px;
+  font-size: 1.7rem;
   gap: 10px;
 }
 .contactContainer .urlLinks {
-  font-size: 38px;
-  font-size: 1.9rem;
+  font-size: 32px;
+  font-size: 1.6rem;
   gap: 8px;
 }
 .contactContainer .urlLinks a {
   text-decoration: none;
   font-family: "Sans Mateo";
   color: white;
+}
+.contactContainer .urlLinks a:hover, .contactContainer .urlLinks a:focus {
+  color: rgb(176, 145, 205);
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 .contactContainer .linkLogos, .contactContainer .urlLinks {
   display: -webkit-box;

@@ -2,11 +2,36 @@ html {
     scroll-behavior: smooth;
 }
 
+nav {
+    width: 100%;
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+
+        a {
+            @include fontSize(25);
+            color: white;
+            font-family: $logoFont;
+            text-decoration: none;
+            text-transform: uppercase;
+            cursor: pointer;
+
+            &:hover,
+            &:focus {
+                color: #696969;
+                transition: .5s;
+            }
+        }
+    }
+}
+
 h1 {
-    font-family: $logoFont;
-    text-transform: uppercase;
-    @include fontSize(80);
     text-align: center;
+    font-family: $logoFont;
+    @include fontSize(90);
+    text-transform: uppercase;
 }
 
 button {
@@ -35,7 +60,7 @@ p {
     font-family: $bodyFont;
     text-align: center;
     @include fontSize(25);
-    margin: 5px 0;
+    margin: 5px 0px;
 }
 
 h1,

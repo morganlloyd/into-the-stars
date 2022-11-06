@@ -34,7 +34,7 @@ nasaApp.getPicture = () => {
 // created a method to append data that is passed into it 
 nasaApp.showPicture = (arrayOfData) => {
 
-    const pictureContainer = document.querySelector(`ul`);
+    const pictureContainer = document.querySelector(`.appendImg`);
     pictureContainer.innerHTML = '';
     
     arrayOfData.forEach(img => {

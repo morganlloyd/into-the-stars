@@ -13,6 +13,8 @@ nasaApp.init = () => {
 // created a method to hold the API fetch info 
 nasaApp.getPicture = () => {
 
+// created a method to hold the API fetch info
+nasaApp.getPicture = () => {
     // Nasa API URL
     nasaApp.baseUrl = new URL(`https://api.nasa.gov/planetary/apod`);
 
@@ -21,17 +23,19 @@ nasaApp.getPicture = () => {
             count: 1
         });
 
-    
+        
         fetch(nasaApp.baseUrl)
             .then(response => response.json())
             .then(data => {
                 // Using method created in namespace to parse the returned object and preform a bunch of appending 
+                // Using method created in namespace to parse the returned  object and perform a bunch of appending
                 nasaApp.showPicture(data)
                 console.log(data);
             })
 }
 
 // created a method to append data that is passed into it 
+// created a method to append the data that is passed into it
 nasaApp.showPicture = (arrayOfData) => {
 
     const pictureContainer = document.querySelector(`.appendImg`);
@@ -77,25 +81,69 @@ nasaApp.showPicture = (arrayOfData) => {
             }
         });
         
+        const picture = document.createElement(`img`); // creating img element
+        picture.src = img.url;
+        picture.alt = img.title;
         
-        
+        const checkbox = document.createElement('input'); // creating checkbox input
+        checkbox.type = "checkbox";
+        checkbox.name = "curious";
+        checkbox.value = "moreInfo";
+        checkbox.id = "moreInfo";
+        checkbox.className = "checkboxClass";
 
+        const label = document.createElement('label'); // creating label for checkbox
+        label.htmlFor = "moreInfo";
+        label.textContent = "Additional Information";
+
+        const arrowDiv = document.createElement('div'); // creating div to hold the arrow 
+        arrowDiv.className = 'arrow';
+        label.appendChild(arrowDiv);
+
+        const inputContainer = document.createElement('div'); // creating div to hold the label and checkbox to align it using position absolute
+        inputContainer.className = 'inputContainer';
+        inputContainer.appendChild(checkbox);
+        inputContainer.appendChild(label);
+
+        const infoAnchor = document.createElement(`div`); // creating div to anchor the absolute positioning of the input container 
+        infoAnchor.className = "infoAnchor";
+        infoAnchor.appendChild(picture);
+        infoAnchor.appendChild(inputContainer);
+        
+        pictureAchor.appendChild(pictureTitle); // adding the title to the li
+        pictureAchor.appendChild(infoAnchor); // adding the container with the img and checkbox to the li
+        pictureAchor.appendChild(pictureInfo); // adding the text description to the li
+        pictureContainer.appendChild(pictureAchor); // adding the li with all the info to the ul
+
+        const checkboxListener = document.querySelector('input[type="checkbox"]')
+
+        console.log(checkboxListener);
+
+        checkboxListener.addEventListener(`input`, function(e) {
+            const checked = e.target.checked;
+
+            if (checked === true) {
+                pictureInfo.style.display = "block";
+            } else {
+                pictureInfo.style.display = "none";
+            }
+        })
     });
 }
 
-// 
 nasaApp.setUpEventListeners = () => {
     const randomButton = document.querySelector(`.randomButton`);
     const imgContainer = document.querySelector(`.nasaImgContainer`);
     
+nasaApp.setUpEventListeners = () => {
+    const randomButton = document.querySelector(`.randomButton`);
+    const imgContainer = document.querySelector('.nasaImgContainer');
 
     randomButton.addEventListener(`click`, function(e) {
         nasaApp.getPicture();
         imgContainer.style.display = "block";
         imgContainer.scrollIntoView();
     })
-
-    
 };
 
     

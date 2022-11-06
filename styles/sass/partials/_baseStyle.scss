@@ -63,11 +63,15 @@ p {
     margin: 5px 0px;
 }
 
-h1, h2, p, button {
+h1,
+h2,
+p,
+button {
     color: white;
 }
 
 h2 {
     font-family: $logoFont;
-    @include fontSize(50)
+    @include fontSize(50);
+    text-align: center;
 }

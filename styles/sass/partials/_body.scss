@@ -18,19 +18,76 @@ body {
     .nasaImgContainer {
         min-height: 80vh;
         display: none;
+        min-height: 100vh;
         
         ul {
             list-style: none;
             padding: 0;
+            background-color: rgba($color: #696969, $alpha: .7);
+            border-radius: 50px;
             padding-bottom: 40px;
             text-align: center;
-            background-color: rgba($color: #696969, $alpha: .7);
-            border-radius: 30px;
 
             li {
                 display: flex;
-                align-items: center;
                 flex-direction: column;
+                align-items: center;
+
+                .infoAnchor {
+                    position: relative;
+
+                    .inputContainer {
+                        padding-top: 20px;
+
+                        .checkboxClass {
+                            visibility: hidden;
+                        }
+
+                        label {
+                            font-family: $logoFont;
+                            color: transparent;
+                            background-clip: text;
+                            background-image: url(../assets/sparkling-stars.gif);
+                            @include fontSize(25);
+                            text-transform: uppercase;
+                            position: relative;
+                            cursor: pointer;
+                            transition: .3s;
+
+                            &:hover,
+                            &:focus {
+                                color: white;
+
+                                .arrow:not(:hover) {
+                                    border-bottom-width: 10px;
+                                    border-right-width: 10px;
+                                    border-image: none;
+                                }
+                            }
+
+                            .arrow {
+                                position: absolute;
+                                box-sizing: border-box;
+                                height: 25px;
+                                width: 25px;
+                                border-style: solid;
+                                border-image: url(../assets/sparkling-stars.gif) 30 round;
+                                border-width: 0px 5px 5px 0px;
+                                transform: rotate(45deg);
+                                transition: border-width 150ms ease-in-out;
+                                left: -40px;
+                                bottom: 5px;
+
+                                &:hover,
+                                &:focus {
+                                        border-bottom-width: 10px;
+                                        border-right-width: 10px;
+                                        border-image: none;
+                                    }
+                            }
+                        }
+                    }
+                }
 
                 img {
                     width: 80%;

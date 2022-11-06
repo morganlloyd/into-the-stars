@@ -14,8 +14,21 @@ button {
     font-family: $logoFont;
     text-transform: uppercase;
     border: none;
-    background-color: rgba($color: #0B3D91, $alpha: .7);
+    border-radius: 20px;
+    background-color: rgba($color: #696969, $alpha: .7);
     margin: 42.88px 0;
+    transition: .5s;
+
+    &:hover,
+    &:focus {
+        cursor: url(../assets/rocketship-emoji.png), pointer;
+        background-image: url(../assets/smoke.gif);
+        background-size: cover;
+        background-position: center;
+        background-repeat: none;
+        color: transparent;
+        padding: 50px 50px;
+    }
 }
 
 p {
@@ -26,7 +39,14 @@ p {
 }
 
 h1,
+h2,
 p,
 button {
     color: white;
+}
+
+h2 {
+    font-family: $logoFont;
+    @include fontSize(50);
+    text-align: center;
 }

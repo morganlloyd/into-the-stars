@@ -10,9 +10,6 @@ nasaApp.init = () => {
 
 }
 
-// created a method to hold the API fetch info 
-nasaApp.getPicture = () => {
-
 // created a method to hold the API fetch info
 nasaApp.getPicture = () => {
     // Nasa API URL
@@ -58,11 +55,11 @@ nasaApp.showPicture = (arrayOfData) => {
         checkbox.name = "curious";
         checkbox.value = "moreInfo";
         checkbox.id = "moreInfo";
+        checkbox.className = "checkboxClass"
 
         const label = document.createElement('label');
         label.htmlFor = "moreInfo";
         label.textContent = "Additional Information";
-
 
         pictureAchor.appendChild(pictureTitle);
         pictureAchor.appendChild(picture);
@@ -70,31 +67,6 @@ nasaApp.showPicture = (arrayOfData) => {
         pictureContainer.appendChild(pictureAchor);
         pictureContainer.appendChild(checkbox);
         pictureContainer.appendChild(label);
-
-        const checkboxListener = document.querySelector(`input[type=checkbox]`);
-        checkboxListener.addEventListener(`input`, function(e) {
-            const checked = e.target.checked;
-            if (checked === true) {
-                pictureInfo.style.display = "block";
-            } else {
-                pictureInfo.style.display = "none";
-            }
-        });
-        
-        const picture = document.createElement(`img`); // creating img element
-        picture.src = img.url;
-        picture.alt = img.title;
-        
-        const checkbox = document.createElement('input'); // creating checkbox input
-        checkbox.type = "checkbox";
-        checkbox.name = "curious";
-        checkbox.value = "moreInfo";
-        checkbox.id = "moreInfo";
-        checkbox.className = "checkboxClass";
-
-        const label = document.createElement('label'); // creating label for checkbox
-        label.htmlFor = "moreInfo";
-        label.textContent = "Additional Information";
 
         const arrowDiv = document.createElement('div'); // creating div to hold the arrow 
         arrowDiv.className = 'arrow';
@@ -131,10 +103,6 @@ nasaApp.showPicture = (arrayOfData) => {
     });
 }
 
-nasaApp.setUpEventListeners = () => {
-    const randomButton = document.querySelector(`.randomButton`);
-    const imgContainer = document.querySelector(`.nasaImgContainer`);
-    
 nasaApp.setUpEventListeners = () => {
     const randomButton = document.querySelector(`.randomButton`);
     const imgContainer = document.querySelector('.nasaImgContainer');

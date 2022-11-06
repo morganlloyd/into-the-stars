@@ -314,6 +314,7 @@ h2 {
   font-family: "NASA";
   font-size: 50px;
   font-size: 2.5rem;
+  text-align: center;
 }
 
 body {
@@ -354,6 +355,196 @@ body .nasaImgContainer ul {
   text-align: center;
 }
 body .nasaImgContainer ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+body .nasaImgContainer ul li .infoAnchor {
+  position: relative;
+}
+body .nasaImgContainer ul li .infoAnchor .inputContainer {
+  padding-top: 20px;
+}
+body .nasaImgContainer ul li .infoAnchor .inputContainer .checkboxClass {
+  visibility: hidden;
+}
+body .nasaImgContainer ul li .infoAnchor .inputContainer label {
+  font-family: "NASA";
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  background-image: url(../assets/sparkling-stars.gif);
+  font-size: 25px;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+body .nasaImgContainer ul li .infoAnchor .inputContainer label:hover, body .nasaImgContainer ul li .infoAnchor .inputContainer label:focus {
+  color: white;
+}
+body .nasaImgContainer ul li .infoAnchor .inputContainer label:hover .arrow:not(:hover), body .nasaImgContainer ul li .infoAnchor .inputContainer label:focus .arrow:not(:hover) {
+  border-bottom-width: 10px;
+  border-right-width: 10px;
+  -o-border-image: none;
+     border-image: none;
+}
+body .nasaImgContainer ul li .infoAnchor .inputContainer label .arrow {
+  position: absolute;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 25px;
+  width: 25px;
+  border-style: solid;
+  -o-border-image: url(../assets/sparkling-stars.gif) 30 round;
+     border-image: url(../assets/sparkling-stars.gif) 30 round;
+  border-width: 0px 5px 5px 0px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: border-width 150ms ease-in-out;
+  transition: border-width 150ms ease-in-out;
+  left: -40px;
+  bottom: 5px;
+}
+body .nasaImgContainer ul li .infoAnchor .inputContainer label .arrow:hover, body .nasaImgContainer ul li .infoAnchor .inputContainer label .arrow:focus {
+  border-bottom-width: 10px;
+  border-right-width: 10px;
+  -o-border-image: none;
+     border-image: none;
+}
+body .nasaImgContainer ul li img {
+  width: 80%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 50px;
+}
+body .nasaImgContainer ul li p {
+  display: none;
+  padding-top: 50px;
+  width: 80%;
+  text-align: left;
+  line-height: 2rem;
+  letter-spacing: 0.15rem;
+}
+
+.contactNav {
+  padding-top: 20px;
+}
+.contactNav ul {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.contactNav i {
+  font-size: 45px;
+  font-size: 2.25rem;
+}
+
+.contactHeader {
+  min-height: 15vh;
+  display: grid;
+}
+.contactHeader h2 {
+  font-size: 60px;
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin: auto;
+}
+
+.contactContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  min-width: 100%;
+  min-height: 70vh;
+  gap: 80px;
+  color: white;
+}
+.contactContainer .nin,
+.contactContainer .morgan {
+  background-color: rgba(105, 105, 105, 0.7);
+  border-radius: 30px;
+  padding: 60px 0px;
+  min-width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.contactContainer .nin h3,
+.contactContainer .morgan h3 {
+  font-family: "NASA";
+  font-size: 40px;
+  font-size: 2rem;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 30px;
+}
+.contactContainer .linkContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+.contactContainer .linkLogos {
+  font-size: 34px;
+  font-size: 1.7rem;
+  gap: 10px;
+}
+.contactContainer .urlLinks {
+  font-size: 32px;
+  font-size: 1.6rem;
+  gap: 8px;
+}
+.contactContainer .urlLinks a {
+  text-decoration: none;
+  font-family: "Sans Mateo";
+  color: white;
+}
+.contactContainer .urlLinks a:hover, .contactContainer .urlLinks a:focus {
+  color: rgb(176, 145, 205);
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+.contactContainer .linkLogos, .contactContainer .urlLinks {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -28,6 +28,8 @@ nasaApp.getPicture = () => {
                 // Using method created in namespace to parse the returned  object and perform a bunch of appending
                 nasaApp.showPicture(data)
                 console.log(data);
+                console.log(data[0].url);
+                // if data[0].media_type = "video" -> then do something to skip the video
             })
 }
 
@@ -47,8 +49,8 @@ nasaApp.showPicture = (arrayOfData) => {
         pictureInfo.textContent = img.explanation;
         
         const picture = document.createElement(`img`);
-        picture.src = img.url;
-        picture.alt = img.title;
+        const video = document.createElement(`iframe`);
+
         
         const checkbox = document.createElement('input');
         checkbox.type = "checkbox";
@@ -56,13 +58,20 @@ nasaApp.showPicture = (arrayOfData) => {
         checkbox.value = "moreInfo";
         checkbox.id = "moreInfo";
         checkbox.className = "checkboxClass"
-
+        
         const label = document.createElement('label');
         label.htmlFor = "moreInfo";
         label.textContent = "Additional Information";
-
+        
         pictureAchor.appendChild(pictureTitle);
-        pictureAchor.appendChild(picture);
+        if (img.media_type === "video") {
+            video.src = img.url;
+            pictureAchor.appendChild(video);
+        } else {
+            picture.src = img.url;
+            picture.alt = img.title;
+            pictureAchor.appendChild(picture);
+        }
         pictureAchor.appendChild(pictureInfo);
         pictureContainer.appendChild(pictureAchor);
         pictureContainer.appendChild(checkbox);

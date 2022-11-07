@@ -366,6 +366,14 @@ body .nasaImgContainer ul li {
       -ms-flex-align: center;
           align-items: center;
 }
+body .nasaImgContainer ul li iframe {
+  margin-top: 40px;
+  width: 80%;
+  height: 50vh;
+  border: none;
+  -webkit-box-shadow: 10px 10px 10px 3px #e78267;
+          box-shadow: 10px 10px 10px 3px #e78267;
+}
 body .nasaImgContainer ul li .infoAnchor {
   position: relative;
 }
@@ -373,14 +381,30 @@ body .nasaImgContainer ul li .infoAnchor .inputContainer {
   padding-top: 20px;
 }
 body .nasaImgContainer ul li .infoAnchor .inputContainer .checkboxClass {
-  visibility: hidden;
+  left: 77px;
+  bottom: 0;
+  opacity: 0;
 }
-body .nasaImgContainer ul li .infoAnchor .inputContainer label {
-  font-family: "NASA";
+body .nasaImgContainer ul li .infoAnchor .inputContainer .checkboxClass + label::after {
+  content: none;
+}
+body .nasaImgContainer ul li .infoAnchor .inputContainer .checkboxClass:checked + label::after {
+  content: "";
+}
+body .nasaImgContainer ul li .infoAnchor .inputContainer .checkboxClass:checked + label {
   color: transparent;
   -webkit-background-clip: text;
           background-clip: text;
   background-image: url(../assets/sparkling-stars.gif);
+}
+body .nasaImgContainer ul li .infoAnchor .inputContainer .checkboxClass:focus + label::before {
+  border-style: double;
+  -webkit-box-shadow: 5px 5px 5px 1px #e78267;
+          box-shadow: 5px 5px 5px 1px #e78267;
+}
+body .nasaImgContainer ul li .infoAnchor .inputContainer label {
+  font-family: "NASA";
+  color: white;
   font-size: 25px;
   font-size: 1.25rem;
   text-transform: uppercase;
@@ -389,37 +413,26 @@ body .nasaImgContainer ul li .infoAnchor .inputContainer label {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-body .nasaImgContainer ul li .infoAnchor .inputContainer label:hover, body .nasaImgContainer ul li .infoAnchor .inputContainer label:focus {
-  color: white;
-}
-body .nasaImgContainer ul li .infoAnchor .inputContainer label:hover .arrow:not(:hover), body .nasaImgContainer ul li .infoAnchor .inputContainer label:focus .arrow:not(:hover) {
-  border-bottom-width: 10px;
-  border-right-width: 10px;
-  -o-border-image: none;
-     border-image: none;
-}
-body .nasaImgContainer ul li .infoAnchor .inputContainer label .arrow {
+body .nasaImgContainer ul li .infoAnchor .inputContainer label::before, body .nasaImgContainer ul li .infoAnchor .inputContainer label::after {
   position: absolute;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  height: 25px;
-  width: 25px;
+  content: "";
+  display: inline-block;
+  height: 20px;
+  width: 20px;
   border-style: solid;
-  -o-border-image: url(../assets/sparkling-stars.gif) 30 round;
-     border-image: url(../assets/sparkling-stars.gif) 30 round;
-  border-width: 0px 5px 5px 0px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  -webkit-transition: border-width 150ms ease-in-out;
-  transition: border-width 150ms ease-in-out;
-  left: -40px;
-  bottom: 5px;
+  top: -4px;
+  left: -30px;
 }
-body .nasaImgContainer ul li .infoAnchor .inputContainer label .arrow:hover, body .nasaImgContainer ul li .infoAnchor .inputContainer label .arrow:focus {
-  border-bottom-width: 10px;
-  border-right-width: 10px;
-  -o-border-image: none;
-     border-image: none;
+body .nasaImgContainer ul li .infoAnchor .inputContainer label::before {
+  border-width: 0px 5px 5px 0px;
+  margin-right: 20px;
+}
+body .nasaImgContainer ul li .infoAnchor .inputContainer label::after {
+  border-width: 0px 10px 10px 0px;
+  -o-border-image: url(../assets/sparkling-stars.gif) 30 round;
+     border-image: url(../assets/sparkling-stars.gif) 30 round;
 }
 body .nasaImgContainer ul li img {
   width: 80%;

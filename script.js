@@ -27,9 +27,6 @@ nasaApp.getPicture = () => {
                 // Using method created in namespace to parse the returned object and preform a bunch of appending 
                 // Using method created in namespace to parse the returned  object and perform a bunch of appending
                 nasaApp.showPicture(data)
-                console.log(data);
-                console.log(data[0].url);
-                // if data[0].media_type = "video" -> then do something to skip the video
             })
 }
 
@@ -97,8 +94,6 @@ nasaApp.showPicture = (arrayOfData) => {
         pictureContainer.appendChild(pictureAchor); // adding the li with all the info to the ul
 
         const checkboxListener = document.querySelector('input[type="checkbox"]')
-
-        console.log(checkboxListener);
 
         checkboxListener.addEventListener(`input`, function(e) {
             const checked = e.target.checked;

@@ -56,7 +56,8 @@ button {
     }
 }
 
-p {
+p,
+footer {
     font-family: $bodyFont;
     text-align: center;
     @include fontSize(25);
@@ -66,7 +67,8 @@ p {
 h1,
 h2,
 p,
-button {
+button,
+footer {
     color: white;
 }
 
@@ -74,4 +76,24 @@ h2 {
     font-family: $logoFont;
     @include fontSize(50);
     text-align: center;
+}
+
+footer {
+    p {
+        background-color: rgba($color: #696969, $alpha: .7);
+        border-radius: 30px;
+        margin-top: 50px;
+        letter-spacing: .2rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+        transition: .5s;
+
+        &:hover,
+        &:focus {
+            color: #EA593E
+        }
+    }
 }

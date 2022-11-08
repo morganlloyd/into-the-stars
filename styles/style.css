@@ -295,7 +295,8 @@ button:hover, button:focus {
   padding: 50px 50px;
 }
 
-p {
+p,
+footer {
   font-family: "Sans Mateo";
   text-align: center;
   font-size: 25px;
@@ -306,7 +307,8 @@ p {
 h1,
 h2,
 p,
-button {
+button,
+footer {
   color: white;
 }
 
@@ -315,6 +317,22 @@ h2 {
   font-size: 50px;
   font-size: 2.5rem;
   text-align: center;
+}
+
+footer p {
+  background-color: rgba(105, 105, 105, 0.7);
+  border-radius: 30px;
+  margin-top: 50px;
+  letter-spacing: 0.2rem;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+footer a:hover, footer a:focus {
+  color: #EA593E;
 }
 
 body {

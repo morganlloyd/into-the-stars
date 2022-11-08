@@ -79,11 +79,13 @@ h2 {
 }
 
 footer {
+
     p {
         background-color: rgba($color: #696969, $alpha: .7);
         border-radius: 30px;
         margin-top: 50px;
         letter-spacing: .2rem;
+        padding: 10px 10px;
     }
 
     a {

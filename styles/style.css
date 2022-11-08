@@ -324,6 +324,7 @@ footer p {
   border-radius: 30px;
   margin-top: 50px;
   letter-spacing: 0.2rem;
+  padding: 10px 10px;
 }
 footer a {
   text-decoration: none;
@@ -583,4 +584,17 @@ body .nasaImgContainer ul li p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media (max-width: 720px) {
+  h1 {
+    font-size: 70px;
+    font-size: 3.5rem;
+  }
+}
+@media (max-width: 520px) {
+  h1 {
+    font-size: 50px;
+    font-size: 2.5rem;
+  }
 }

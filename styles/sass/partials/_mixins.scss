@@ -4,20 +4,20 @@
 }
 
 @mixin breakpoint($size) {
-    @if $size ==medium {
-        @media (max-width: 1080px) {
+    @if $size ==large {
+        @media (max-width: 1200px) {
+            @content;
+        }
+    }
+
+    @else if $size ==medium {
+        @media (max-width: 720px) {
             @content;
         }
     }
 
     @else if $size ==small {
-        @media (max-width: 740px) {
-            @content;
-        }
-    }
-
-    @else if $size ==smaller {
-        @media (max-width: 570px) {
+        @media (max-width: 520px) {
             @content;
         }
     }

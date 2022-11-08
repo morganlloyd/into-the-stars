@@ -1,0 +1,11 @@
+@include breakpoint(medium) {
+    h1 {
+        @include fontSize(70);
+    }
+}
+
+@include breakpoint(small) {
+    h1 {
+        @include fontSize(50);
+    }
+}
